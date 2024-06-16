@@ -11,3 +11,9 @@ Ex: 1
 Mês = FORMAT(dCalendario[Data], "mmm")
 
 Ex: Jan
+
+
+*Ano
+Ano = YEAR(dCalendario[Data])
+
+Ex: 2018
