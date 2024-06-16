@@ -1,0 +1,13 @@
+crie outra coluna na tabela Calendário
+
+*Número Mês
+Mês no. = MONTH(dCalendario[Data])
+
+Ex: 1
+
+
+
+*Mês em três letras
+Mês = FORMAT(dCalendario[Data], "mmm")
+
+Ex: Jan
