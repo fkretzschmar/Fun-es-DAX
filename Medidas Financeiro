@@ -1,0 +1,17 @@
+Receita = SUM(Recebimento[valor_recebido])
+
+Saídas = SUM(Pagamentos[valor_pago])
+
+Lucro = [Receita]-[Saídas]
+
+Despesas = CALCULATE([Saídas], dPlanoContas[lancamento] = "Despesa")
+
+Custos = CALCULATE([Saídas], dPlanoContas[lancamento] = "Custo")
+
+Margem Bruta = [Receita]-[Custos]
+
+
+
+
+
+
