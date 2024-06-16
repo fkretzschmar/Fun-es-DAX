@@ -16,6 +16,8 @@ Custos = CALCULATE([Saídas], dPlanoContas[lancamento] = "Custo")
 Margem Bruta = [Receita]-[Custos]
 
 Lucro % = [Lucro]/[Receita]
+OU
+Lucro % = DIVIDE([Lucro], [Receita])
 
 Receita Ano Anterior = CALCULATE([Receita], SAMEPERIODLASTYEAR(dCalendario[Data]))
 
