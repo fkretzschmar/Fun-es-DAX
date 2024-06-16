@@ -1,3 +1,8 @@
+*CUSTOS (Embalagens, Mão de Obra, Insumos e Matéria-Prima, Materiais de conservação e limpeza para fábrica, Gastos gerais de fabricação)
+*DESPESAS (Aluguel, Material de Escritório, Contas de Água, Luz e Internet, Pró-labore)
+
+
+
 Receita = SUM(Recebimento[valor_recebido])
 
 Saídas = SUM(Pagamentos[valor_pago])
