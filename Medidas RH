@@ -62,7 +62,7 @@ ________________________________________________________________________________
 *Medida % Má Contratações
 % Má Contratações = DIVIDE([Má Contratação],[Contratações])
 
-
+______________________________________________________________________________________________________________________________________________
 *Medida Turnover representa a rotatividade da empresa, podendo ser aferido apenas para desligamentos 
 ou desligamentos e contratações da organização.
 % Turnover =
@@ -71,7 +71,15 @@ DIVIDE(
     CALCULATE([Headcount], SAMEPERIODLASTYEAR(dCalendario[Date]))
 )
 
-
+*Criar uma coluna ano no caléndario
+% Turnover Ano Max = 
+CALCULATE(
+    [% Turnover],
+    FILTER(
+        ALL(dCalendario),
+        dCalendario[Ano] = MAX(dCalendario[Ano])
+    )
+    )
 
 
 
