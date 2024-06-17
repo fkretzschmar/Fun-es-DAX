@@ -80,6 +80,37 @@ CALCULATE(
         dCalendario[Ano] = MAX(dCalendario[Ano])
     )
     )
+______________________________________________________________________________________________________________________________________________
+*Medida Absenteísmo
+Absenteísmo = 
+CALCULATE(
+    SUM(fFinanceira[Valor]),
+    fFinanceira[Categoria] = "Absenteísmo"
+)
+
+
+
+*Medida Horas Normais
+Horas Normais =
+CALCULATE(
+    SUM(fFinanceira[Valor]),
+    fFinanceira[Categoria] = "Horas Normais"
+)
+
+*Medida % Absenteísmo
+% Absenteísmo = DIVIDE([Absenteísmo], [Horas Normais])
+
+
+*Medida Horas Extras
+Horas Extras = 
+CALCULATE(
+    SUM(fFinanceira[Valor]),
+    fFinanceira[Categoria] = "Horas Extras"
+)
+
+*Medida % Horas Extras
+% Horas Extras = 
+ DIVIDE([Horas Extras], [Horas Normais])
 
 
 
