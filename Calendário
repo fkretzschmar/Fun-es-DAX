@@ -17,3 +17,13 @@ Ex: Jan
 Ano = YEAR(dCalendario[Data])
 
 Ex: 2018
+
+
+*Tabela Caléndario apenas com as datas de Admissão
+
+dCalendario = 
+CALENDAR(
+    DATE(YEAR(MIN(fContrato[Data Admissão])), 01, 01),
+    DATE(YEAR(MAX(fContrato[Data Admissão])), 12, 31)
+)
+
