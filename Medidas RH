@@ -1,0 +1,2 @@
+*Quantidade de Contratações(Quantidade de linha da tabela Contrato)
+Contratações = COUNTROWS(fContrato)
