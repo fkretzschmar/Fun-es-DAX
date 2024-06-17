@@ -63,6 +63,13 @@ ________________________________________________________________________________
 % Má Contratações = DIVIDE([Má Contratação],[Contratações])
 
 
+*Medida Turnover representa a rotatividade da empresa, podendo ser aferido apenas para desligamentos 
+ou desligamentos e contratações da organização.
+% Turnover =
+DIVIDE(
+    [Demissões],
+    CALCULATE([Headcount], SAMEPERIODLASTYEAR(dCalendario[Date]))
+)
 
 
 
