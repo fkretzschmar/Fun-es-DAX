@@ -1,0 +1,16 @@
+*Total de Horas Trabalhadas
+Horas Trabalhadas = SUM('BaseProdução'[Total Horas])
+
+
+Total Aprovado = SUM('BaseProdução'[Qtd Aprovada])
+
+
+Total Rejeitados = SUM('BaseProdução'[Qtd Rejeitada])
+
+
+Total Produzido = [Total Aprovado] + [Total Rejeitados]
+
+
+*BLANK() "Significa em branco"
+Horas Produtivas = CALCULATE(SUM('BaseProdução'[Total Horas]), 'BaseProdução'[Ocorrência] = BLANK())
+
