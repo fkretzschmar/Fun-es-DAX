@@ -14,3 +14,8 @@ Total Produzido = [Total Aprovado] + [Total Rejeitados]
 *BLANK() "Significa em branco"
 Horas Produtivas = CALCULATE(SUM('BaseProdução'[Total Horas]), 'BaseProdução'[Ocorrência] = BLANK())
 
+
+% Produtividade = [Horas Produtivas]/[Horas Trabalhadas]
+
+
+% Qualidade = [Total Aprovado]/[Total Produzido]
