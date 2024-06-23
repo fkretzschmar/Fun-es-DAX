@@ -1,6 +1,11 @@
 *Quantidade de Contratações(Quantidade de linha da tabela Contrato)
 Contratações = COUNTROWS(fContrato)
 
+Func. Ativos = CALCULATE(
+    COUNTROWS(BaseFuncionario),
+    BaseFuncionario[Data de Demissao] = BLANK()
+)
+
 
 *Quantidade demissões(Fazer a ligação da tabela caléndario/Date com dContrato/Data Afastamento)
 Demissões = 
