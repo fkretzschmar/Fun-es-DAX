@@ -6,6 +6,12 @@ Func. Ativos = CALCULATE(
     BaseFuncionario[Data de Demissao] = BLANK()
 )
 
+Func. Desligados = CALCULATE(
+    COUNTROWS(BaseFuncionario),
+    BaseFuncionario[Data de Demissao] <> BLANK()
+)
+
+OU
 
 *Quantidade demissões(Fazer a ligação da tabela caléndario/Date com dContrato/Data Afastamento)
 Demissões = 
