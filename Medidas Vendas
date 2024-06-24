@@ -1,0 +1,30 @@
+## ETL
+*PROCV - Página Inicial > Combinar > Mesclar consulta "Seleciona as colunas iguais" de OK > na coluna selecione a coluna que deseja
+
+                                                        CALENDÁRIO
+
+dCalendario = CALENDARAUTO()
+
+*COLUNAS
+Mês = MONTH(dCalendario[Data])
+Mês Nome = FORMAT(dCalendario[Data], "mmm")
+Mês/Ano = FORMAT(dCalendario[Data], "mmm/yyyy")
+
+_____________________________________________________________________________________________________________________________________
+                                                        MEDIDAS
+
+Faturamento = SUM(fVendas[ValorVenda])
+
+
+Notas Emitidas = DISTINCTCOUNT(fVendas[NFe])
+
+
+Ticket Médio = DIVIDE([Faturamento],[Notas Emitidas])
+
+
+Custo Venda = SUMX(fVendas, RELATED(dProduto[CustoUnitario]) * fVendas[QtdItens])
+
+
+Margem Bruta = [Faturamento] - [Custo Venda]
+
+
