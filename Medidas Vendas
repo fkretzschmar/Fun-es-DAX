@@ -39,3 +39,32 @@ Cor Gráficos = SWITCH(
     )
 
 
+Título Produto = UPPER(VALUES(auxMedida[auxMedida])) & " POR PRODUTO"
+Título Tempo = UPPER(VALUES(auxMedida[auxMedida])) & " ANO SELECIONADO vs ANO ANTERIOR"
+
+_____________________________________________________________________________________________________
+Faturamento LY = CALCULATE(
+    [Faturamento],
+    SAMEPERIODLASTYEAR(dCalendario[Data])
+)
+
+Margem Bruta LY = CALCULATE(
+    [Margem Bruta],
+    SAMEPERIODLASTYEAR(dCalendario[Data])
+)
+
+Notas Emitidas LY = CALCULATE(
+    [Notas Emitidas],
+    SAMEPERIODLASTYEAR(dCalendario[Data])
+)
+
+Medida Selecionada LY = 
+SWITCH(
+    SELECTEDVALUE(auxMedida[auxMedida Pedido]),
+    0, [Faturamento LY],
+    1, [Margem Bruta LY],
+    2, [Notas Emitidas LY]
+)
+______________________________________________________________________________________________________
+
+
