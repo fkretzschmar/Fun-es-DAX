@@ -28,3 +28,14 @@ Custo Venda = SUMX(fVendas, RELATED(dProduto[CustoUnitario]) * fVendas[QtdItens]
 Margem Bruta = [Faturamento] - [Custo Venda]
 
 
+Rank = RANKX(ALL(dVendedor), [Faturamento])
+
+
+Cor Gráficos = SWITCH(
+    SELECTEDVALUE(auxMedida[auxMedida Pedido]),
+    0, "#6b12b9",
+    1, "#5554fe",
+    2, "#14acff"
+    )
+
+
