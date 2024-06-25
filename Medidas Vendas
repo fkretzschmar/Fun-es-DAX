@@ -38,6 +38,17 @@ Cor Gráficos = SWITCH(
     2, "#14acff"
     )
 
+OU
+
+Cor Gráficos = SWITCH(
+    TRUE(),
+    SELECTEDVALUE(auxMedida[auxMedida Pedido]) = 0 && [Faturamento YoY %] >= 0, "#6b12b9",
+    SELECTEDVALUE(auxMedida[auxMedida Pedido]) = 0 && [Faturamento YoY %] < 0, "#A671D5",
+    SELECTEDVALUE(auxMedida[auxMedida Pedido]) = 1 && [Margem Bruta YoY %] >= 0, "#5554fe",
+    SELECTEDVALUE(auxMedida[auxMedida Pedido]) = 1 && [Margem Bruta YoY %] < 0, "#bbbafe",
+    SELECTEDVALUE(auxMedida[auxMedida Pedido]) = 2 && [Notas Emitidas YoY %] >= 0, "#14acff",
+    SELECTEDVALUE(auxMedida[auxMedida Pedido]) = 2 && [Notas Emitidas YoY %] < 0, "#a1ddfe"
+    )
 
 Título Produto = UPPER(VALUES(auxMedida[auxMedida])) & " POR PRODUTO"
 Título Tempo = UPPER(VALUES(auxMedida[auxMedida])) & " ANO SELECIONADO vs ANO ANTERIOR"
@@ -66,5 +77,20 @@ SWITCH(
     2, [Notas Emitidas LY]
 )
 ______________________________________________________________________________________________________
+
+Faturamento YoY % =
+ DIVIDE([Faturamento] - [Faturamento LY],
+ [Faturamento LY]
+ )
+
+ Margem Bruta YoY % =
+ DIVIDE([Margem Bruta] - [Margem Bruta LY],
+ [Margem Bruta LY]
+ )
+
+ Notas Emitidas YoY % =
+ DIVIDE([Notas Emitidas] - [Notas Emitidas LY],
+ [Notas Emitidas LY]
+ )
 
 
