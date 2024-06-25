@@ -93,4 +93,13 @@ Faturamento YoY % =
  [Notas Emitidas LY]
  )
 
+___________________________________________________________________________________________________________
+
+% Meta Faturamento = DIVIDE([Faturamento],SUM(fMetas[Meta Faturamento]))
+
+% Meta Margem Bruta = DIVIDE([Margem Bruta],SUM(fMetas[Meta Margem Bruta]))
+
+% Metas Notas Emitidas = DIVIDE([Notas Emitidas],SUM(fMetas[Meta Notas Emitidas]))
+
+
 
