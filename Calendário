@@ -5,7 +5,7 @@ ADDCOLUMNS(
     "Mês", MONTH([Date]),
     "NomeDoMês", FORMAT([Date], "Mmm"),
     "Trimestre", QUARTER([Date]),
-    "Ano-Mês", FORMAT([Date], "YYYY-MM")
+    "Ano-Mês", FORMAT([Date], "MM/YYYY")
 )
 
 
