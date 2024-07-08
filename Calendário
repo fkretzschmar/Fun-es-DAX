@@ -1,3 +1,12 @@
+AUTOMATICO(RECOMENDADO)
+*Tabela Caléndario apenas com as datas de Admissão(PODE SER UTILIZADO PARA DATA ADMISSÃO E TAMBÉM PARA VENDAS)
+
+dCalendario = 
+CALENDAR(
+    DATE(YEAR(MIN(fContrato[Data Admissão])), 01, 01),
+    DATE(YEAR(MAX(fContrato[Data Admissão])), 12, 31)
+)
+______________________________________________________________________________________________________________________________________
 *Power_Query
 =List.Dates
 
@@ -39,12 +48,6 @@ Ano = YEAR(dCalendario[Data])
 
 Ex: 2018
 
+_____________________________________________________________________________________________________________________________
 
-*Tabela Caléndario apenas com as datas de Admissão
-
-dCalendario = 
-CALENDAR(
-    DATE(YEAR(MIN(fContrato[Data Admissão])), 01, 01),
-    DATE(YEAR(MAX(fContrato[Data Admissão])), 12, 31)
-)
 
