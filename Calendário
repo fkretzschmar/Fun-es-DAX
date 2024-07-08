@@ -3,9 +3,9 @@ AUTOMATICO(RECOMENDADO)
 
 dCalendario = 
 CALENDAR(
-    DATE(YEAR(MIN(fContrato[Data Admissão])), 01, 01),
-    DATE(YEAR(MAX(fContrato[Data Admissão])), 12, 31)
-)
+    DATE(YEAR(MIN(fVendas[DataEmissao])), 01, 01),
+    DATE(YEAR(MAX(fVendas[DataEmissao])), 12, 31)
+   )
 ______________________________________________________________________________________________________________________________________
 *Power_Query
 =List.Dates
