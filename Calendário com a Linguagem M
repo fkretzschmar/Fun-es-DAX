@@ -2,9 +2,6 @@
 
 
 
-
-
-
 let
     // Alterar somente a Tabela e a coluna de datas
     MenorData = List.Min(fVendas[Data]),
