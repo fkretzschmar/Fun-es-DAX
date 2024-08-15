@@ -1,0 +1,19 @@
+-Filtro de quadrado(Acessórios | Calçados | Roupas)
+
+#Colocar essa medida no fx do título
+
+Título Curso =
+VAR vCategoria = SELECTEDVALUE(sim_produto[categoria])
+RETURN
+"Faturamento por Vendedor (" &
+IF(ISFILTERED(dim_produto[categoria]), vCategoria, "Todas Categorias") &
+")"
+
+- - - - - - - - - - - - -- - - - - - - - - - - - - - - -- - - - - - -
+
+#colocar valores numericos no subtitulo do gráfico
+
+*Medida
+
+subtitulo Curso = "Ticket Médio: " &
+FORMAT([Ticket Médio], "R$ #0.00")
