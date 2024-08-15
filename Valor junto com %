@@ -1,0 +1,16 @@
+-Quantidade de Clientes por Faixa Etária
+
+*Medida
+
+% Total Clientes =
+VAR vTotal =
+CALCULATE(
+    [Clientes],
+    ALL(dim_cliente)
+)
+RETURN
+" (" &
+FORMAT(DIVDE([Clientes], vTotal), "0%") 
+& ")"
+
+*Lá em Rótulos de dados -> ative (Detalhes) -> selecione a medida a cima
