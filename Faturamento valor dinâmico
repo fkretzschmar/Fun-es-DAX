@@ -1,0 +1,10 @@
+VAR vValor = [Faturamento]
+VAR vFormato =
+SWITCH(
+    TRUE(),
+    vValor > 1000000, FORMAT(vValor, "#0,,.0 Mi),
+    vValor > 1000, FORMAT(vValor, "0,.0 K"),
+    FORMAT(vValor, "#0")
+)
+RETURN
+"""" & vFormato & """"
