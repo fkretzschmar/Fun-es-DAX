@@ -1,0 +1,8 @@
+*Crie uma medida
+
+COR = 
+VAR vVendedor = SELECTEDVALUE(dim_vendedor[id_vendedor])
+RETURN
+IF(vVendedor = 2, "#C4C4C4", "DARK GREEN")
+
+#VÁ EM VISUAL -> BARRAS -> COR fx -> Valor do Campo "selecione a medida"
