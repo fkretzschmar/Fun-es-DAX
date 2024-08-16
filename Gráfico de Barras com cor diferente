@@ -6,3 +6,18 @@ RETURN
 IF(vVendedor = 2, "#C4C4C4", "DARK GREEN")
 
 #VÁ EM VISUAL -> BARRAS -> COR fx -> Valor do Campo "selecione a medida"
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Visual -> Barras -> Cor fx 
+
+Estilo do formato: Regras
+Em que campo devemos basear isso?: Primeiro nome_vendedor
+Se o valor: contem _ Carla
+
+OU
+
+Estilo do formato: Regras
+Em que campo devemos basear isso?: Faturamento
+Se o valor: >= _ 230000 _ Número _ < _ Máx _ Número
+
