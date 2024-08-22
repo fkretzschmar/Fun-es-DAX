@@ -1,0 +1,29 @@
+Ranking =
+VAR vRFat =
+RANKX(
+      ALL(dim_vendedor[nome_vendedor]),
+      [Faturamento]
+)
+VAR vRDesc =
+RANKX(
+      ALL(dim_vendedor[nome_vendedor]),
+      [Descontos]
+)
+VAR vRPro =
+RANKX(
+      ALL(dim_vendedor[nome_vendedor]),
+      [Produtos Vendidos]
+)
+VAR vRClientes =
+RANKX(
+      ALL(dim_vendedor[nome_vendedor]),
+      [Clientes]
+)
+RETURN
+SWITCH(
+    TRUE(),
+    SELECTEDVALUE('Analisar por'[Analisar por Pedido]) = 0, vRFat,
+    SELECTEDVALUE('Analisar por'[Analisar por Pedido]) = 1, vRDesc,
+    SELECTEDVALUE('Analisar por'[Analisar por Pedido]) = 2, vRProd,
+    vRClientes
+)
