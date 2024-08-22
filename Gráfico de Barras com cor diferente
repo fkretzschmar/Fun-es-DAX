@@ -21,3 +21,15 @@ Estilo do formato: Regras
 Em que campo devemos basear isso?: Faturamento
 Se o valor: >= _ 230000 _ Número _ < _ Máx _ Número
 
+- - - - - - -- - - - -- - - - - - - - - - - - - - - - - - - - - - - -
+*Mudar a cor dos graficos conforme o valor da coluna
+-Criar medida
+
+Cor Colunas =
+SWITCH(
+    SELECTEDVALUE(dim_tempo[Trimestre Referência]),
+      "Trimestre Atual", "#4D6364",
+      "Trimestre Anterior", "#A58898",
+      "Mesmo Trim. Ano Anterior", "#E50988",
+      "LIGHT GRAY"
+)
