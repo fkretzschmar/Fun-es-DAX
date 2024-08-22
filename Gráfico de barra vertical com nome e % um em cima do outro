@@ -1,0 +1,21 @@
+*Crie uma medida chamada Dummy com valor 0, coloque no eixo X junto com faturamento.
+
+
+*Crie outra medida que vai ter o nome do vendedor e a % do faturamento juntos
+
+Rótulo Barras =
+VAR vFatTotal =
+CALCULATE(
+  [Faturamento],
+  ALLSELECTED(dim_vendedor[nome_vendedor])
+)
+RETURN
+SELECTEDVALUE(dim_vendedor[nome_vendedor]) &
+" (" &
+FORMAT(DIVIDE([Faturamento], vFatTotal), "0.0%") &
+")"
+
+
+
+*Selecione o gráfico -> Rótulo de Dados selecione Dummy -> Valor mude Dummy para a medida (Rótulo Barras) criada a cima
+
