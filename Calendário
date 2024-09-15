@@ -1,11 +1,19 @@
 AUTOMATICO(RECOMENDADO)
 *Tabela Caléndario apenas com as datas de Admissão(PODE SER UTILIZADO PARA DATA ADMISSÃO E TAMBÉM PARA VENDAS)
 
-dCalendario = 
-CALENDAR(
-    DATE(YEAR(MIN(fVendas[DataEmissao])), 01, 01),
-    DATE(YEAR(MAX(fVendas[DataEmissao])), 12, 31)
-   )
+dCalendário = 
+ADDCOLUMNS(
+  CALENDAR(
+DATE(YEAR(MIN(fVendas[DataEmissao])), 01, 01),
+DATE(YEAR(MAX(fVendas[DataEmissao])), 12, 31)
+),
+  "Ano", YEAR([Date]),
+  "Mês", MONTH([Date]),
+  "NomeDoMês", UPPER(LEFT(FORMAT([Date], "Mmm"), 1)) 
+  & LOWER(MID(FORMAT([Date], "Mmm"), 2, LEN(FORMAT([Date], "Mmm")) - 1)),
+  "Trimestre", QUARTER([Date]),
+  "Ano-Mês", FORMAT([Date], "MM/YYYY")
+)
 ______________________________________________________________________________________________________________________________________
 *Power_Query
 =List.Dates
